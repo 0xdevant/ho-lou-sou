@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://discount.clawify.dev/sitemap.xml

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>好路數 — 香港著數優惠一覽</title>
+    <meta name="description" content="好路數幫你一次過睇晒香港最新優惠著數，涵蓋衣食住行，每日自動更新。" />
+    <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121220" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="好路數" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://api-discount.clawify.dev" crossorigin />
+    <link rel="dns-prefetch" href="https://api-discount.clawify.dev" />
+
+    <link rel="canonical" href="https://discount.clawify.dev/" />
+    <meta property="og:title" content="好路數 — 香港著數優惠一覽" />
+    <meta property="og:description" content="香港最新優惠著數，衣食住行一覽無遺，每日自動更新。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://discount.clawify.dev" />
+    <meta property="og:locale" content="zh_HK" />
+    <meta property="og:site_name" content="好路數" />
+    <meta property="og:image" content="https://discount.clawify.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="好路數 — 香港著數優惠一覽" />
+    <meta name="twitter:description" content="香港最新優惠著數，衣食住行一覽無遺，每日自動更新。" />
+    <meta name="twitter:image" content="https://discount.clawify.dev/og.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "好路數",
+      "alternateName": "Ho Lou Sou",
+      "url": "https://discount.clawify.dev",
+      "description": "香港最新優惠著數，涵蓋衣食住行，每日自動更新",
+      "inLanguage": "zh-HK",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://discount.clawify.dev/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script>
+      (function(){
+        var t = localStorage.getItem('holousou_theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0658def874c445758ef4ee7af1133cb5"}'></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="0xant" data-description="Support me on Buy me a coffee!" data-message="衷心多謝你嘅支持！" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  </body>
+</html>

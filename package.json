@@ -1,0 +1,18 @@
+{
+  "name": "ho-lou-sou",
+  "private": true,
+  "workspaces": [
+    "worker",
+    "web"
+  ],
+  "scripts": {
+    "deploy": "npm run deploy:worker && npm run deploy:web",
+    "deploy:worker": "cd worker && npx wrangler deploy",
+    "deploy:web": "cd web && VITE_API_URL=https://api-discount.clawify.dev npm run build && npx wrangler pages deploy dist --project-name ho-lou-sou-web",
+    "ingest": "npx tsx scripts/ingest.ts",
+    "purge": "curl -sS -X POST \"${API_URL:-https://api-discount.clawify.dev}/api/purge-excluded\" ${REFRESH_SECRET:+-H \"Authorization: Bearer $REFRESH_SECRET\"}"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}

@@ -1,0 +1,18 @@
+# Copy to .dev.vars (gitignored). Only add what you need.
+
+# --- Filter (optional) — same format as Cloudflare Dashboard ---
+# IMPORTANT: One line = one value. JSON with commas breaks .dev.vars unless quoted:
+# FILTER_CLICKBAIT_PATTERNS="[\"網民\",\"網友\",\"被指\"]"
+# Or use comma-separated (no brackets):
+# FILTER_CLICKBAIT_PATTERNS=網民,網友,被指
+# FILTER_EXCLUDE_KEYWORDS=keyword1,keyword2
+
+# --- Below: optional unless you use those features locally ---
+
+# Crawl API (Jetso Today / Uniqlo / Mannings etc.): only if you trigger crawl on local dev.
+# Leave empty if you only use RSS + direct fetch sources + ingest script.
+# CF_ACCOUNT_ID=
+# CF_API_TOKEN=
+
+# If unset: /api/ingest, /api/refresh, /api/purge-excluded need no Bearer header locally.
+# REFRESH_SECRET=

@@ -1,0 +1,22 @@
+name: Ingest Deals
+
+on:
+  schedule:
+    # 8am, 12pm, 6pm, 11pm HKT (UTC+8)
+    - cron: '0 0,4,10,15 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx tsx scripts/ingest.ts
+        env:
+          API_URL: https://ho-lou-sou-worker.cloudflare-underfeed523.workers.dev
+          REFRESH_SECRET: ${{ secrets.REFRESH_SECRET }}

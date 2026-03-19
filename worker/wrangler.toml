@@ -1,0 +1,23 @@
+name = "ho-lou-sou-worker"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[triggers]
+crons = ["0 0 * * *", "0 1 * * *"]
+# 0 0 UTC = 8am HKT: daily cleanup of old deals
+# 0 1 UTC = 9am HKT: crawl jobs (uses daily budget)
+# Free-source ingestion is handled by GitHub Actions (see .github/workflows/ingest.yml)
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ho-lou-sou-db"
+database_id = "d16749c4-e9ef-449e-bc95-c020a93079c7"
+
+[vars]
+WORKER_ENV = "production"
+# Optional (or set in Dashboard): FILTER_EXCLUDE_KEYWORDS = '["off-topic-region","noise-keyword"]'
+# Optional: FILTER_CLICKBAIT_PATTERNS = '[]'
+
+# CF_ACCOUNT_ID and CF_API_TOKEN are set via .dev.vars (local) or wrangler secret (production)
