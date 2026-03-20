@@ -364,6 +364,15 @@ export default function App() {
           >
             免責聲明
           </button>
+          <span>·</span>
+          <a
+            href="https://buymeacoffee.com/0xant"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-text"
+          >
+            請我飲杯咖啡 ☕
+          </a>
         </div>
       </footer>
     </div>
