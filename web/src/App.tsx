@@ -103,12 +103,14 @@ export default function App() {
     setActiveSource(null);
     setActiveDealType(null);
     setActiveSubFilter(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const handleBrandSelect = useCallback((brand: string | null) => {
     setActiveBrand(brand);
     setActiveDealType(null);
     setActiveSubFilter(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const handleSourceSelect = useCallback((source: string | null) => {
