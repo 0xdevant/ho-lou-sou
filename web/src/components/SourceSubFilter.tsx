@@ -164,7 +164,7 @@ export default function SourceSubFilter({
   if (counted.length === 0) return null;
 
   return (
-    <div className="flex gap-1.5 overflow-x-auto py-1 px-4 no-scrollbar">
+    <div className="flex gap-1 sm:gap-1.5 overflow-x-auto py-0.5 px-2 sm:py-1 sm:px-4 no-scrollbar">
       <button
         onClick={() => onSelect(null)}
         className={`shrink-0 px-2.5 py-0.5 rounded-md text-[11px] font-medium transition-all ${

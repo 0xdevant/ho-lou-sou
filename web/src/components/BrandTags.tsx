@@ -67,8 +67,8 @@ export default function BrandTags({ brands, deals, sourceCounts, activeCategory,
   const isAll = activeBrand === null && activeSource === null;
 
   return (
-    <div className="flex items-center gap-1.5 overflow-x-auto py-1.5 px-4 no-scrollbar">
-      <span className="shrink-0 text-[10px] text-text-muted/60 font-medium">品牌</span>
+    <div className="flex items-center gap-1 sm:gap-1.5 overflow-x-auto py-1 px-2 sm:py-1.5 sm:px-4 no-scrollbar">
+      <span className="shrink-0 text-[9px] sm:text-[10px] text-text-muted/60 font-medium">品牌</span>
       <button
         onClick={() => { onSelectBrand(null); onSelectSource(null); }}
         className={`shrink-0 px-3 py-1 rounded-md text-xs font-medium transition-all ${

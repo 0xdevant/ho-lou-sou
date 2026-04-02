@@ -174,7 +174,7 @@ export default function App() {
   return (
     <div className="min-h-screen max-w-2xl mx-auto pb-8">
       <header className="sticky top-0 z-10 bg-surface/80 backdrop-blur-lg border-b border-border">
-        <div className="flex items-center justify-between px-4 py-3">
+        <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-3">
           <button
             onClick={() => {
               setPage("home");
@@ -189,12 +189,23 @@ export default function App() {
             }}
             className="flex items-center gap-2.5 text-left"
           >
-            <img src="/logo.png" alt="好路數" className="w-9 h-9 rounded-lg" />
-            <div>
-              <h1 className="text-xl font-bold text-text tracking-tight leading-tight">
+            <img src="/logo.png" alt="好路數" className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg shrink-0" />
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-xl font-bold text-text tracking-tight leading-tight">
                 好路數
               </h1>
-              <p className="text-xs text-text-muted">香港著數優惠一覽</p>
+              <p className="text-[10px] sm:text-xs text-text-muted leading-snug">
+                香港著數優惠一覽 ·{" "}
+                <a
+                  href="https://clawify.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-text"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Powered by Clawify
+                </a>
+              </p>
             </div>
           </button>
           <div className="flex items-center gap-1">
